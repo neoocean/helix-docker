@@ -5,7 +5,7 @@ set -e
 tag=$1
 
 if [[ -z "$tag" ]]; then
-  tag="sourcegraph/helix-p4d:latest"
+  tag="helix-p4d:2024.1"
 fi
 
 docker build -t ${tag} --platform linux/amd64 .
