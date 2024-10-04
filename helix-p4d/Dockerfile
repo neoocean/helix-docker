@@ -2,7 +2,7 @@
 # Docker configuration for P4D
 # --------------------------------------------------------------------------------
 
-FROM ubuntu:focal
+FROM ubuntu:focal-20240918
 
 LABEL vendor="Sourcegraph"
 LABEL maintainer="Joe Chen (joe@sourcegraph.com)"
