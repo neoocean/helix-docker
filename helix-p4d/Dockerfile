@@ -8,11 +8,10 @@ LABEL vendor="Sourcegraph"
 LABEL maintainer="Joe Chen (joe@sourcegraph.com)"
 
 # Update Ubuntu and add Perforce Package Source
-RUN apt-get update && \
-  apt-get install -y wget gnupg2 && \
-  wget -qO - https://package.perforce.com/perforce.pubkey | apt-key add - && \
-  echo "deb http://package.perforce.com/apt/ubuntu focal release" > /etc/apt/sources.list.d/perforce.list && \
-  apt-get update
+RUN apt-get update
+RUN apt-get install -y wget gnupg2
+RUN wget -qO - https://package.perforce.com/perforce.pubkey | apt-key add - 
+RUN echo "deb http://package.perforce.com/apt/ubuntu focal release" > /etc/apt/sources.list.d/perforce.list
 
 # --------------------------------------------------------------------------------
 # Docker BUILD
