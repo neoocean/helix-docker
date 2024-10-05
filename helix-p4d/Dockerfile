@@ -45,7 +45,7 @@ RUN cp /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 ARG NAME=perforce-server
 ARG P4NAME=master
 ARG P4TCP=1666
-ARG P4USER=admin
+ARG P4USER=super
 ARG P4PASSWD=pass12349ers
 ARG P4CASE=-C0
 ARG P4CHARSET=utf8
