@@ -22,8 +22,10 @@ RUN echo "deb http://package.perforce.com/apt/ubuntu focal release" > /etc/apt/s
 # for both "Package: helix-p4d" and "Package: helix-swarm-triggers".
 RUN apt-get update 
 RUN apt-get install -yq systemd
-RUN apt-get install -y helix-p4d=2024.1-2655224~focal
-RUN apt-get install -y helix-swarm-triggers=2024.3-2628402~focal
+RUN apt-get install -y helix-p4d=2024.2-2675662~focal
+RUN apt-get install -y helix-swarm-triggers=2024.5-2666202~focal
+RUN apt-get install -y htop
+RUN apt-get install -y tmux
 
 # Add external files
 COPY files/restore.sh /usr/local/bin/restore.sh
