@@ -79,9 +79,7 @@ VOLUME $P4HOME
 # Docker RUN
 # --------------------------------------------------------------------------------
 
-ENTRYPOINT \
-  init.sh && \
-  /usr/bin/tail -F $P4ROOT/logs/log
+ENTRYPOINT ["/bin/sh", "/usr/local/bin/init.sh && /usr/bin/tail -F $P4ROOT/logs/log"]
 
 HEALTHCHECK \
   --interval=2m \
