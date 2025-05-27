@@ -2,7 +2,7 @@
 # Docker configuration for P4D
 # --------------------------------------------------------------------------------
 
-FROM ubuntu:focal-20241011
+FROM ubuntu:focal-20250404
 
 LABEL vendor="Sourcegraph"
 LABEL maintainer="Joe Chen (joe@sourcegraph.com)"
@@ -23,7 +23,7 @@ RUN echo "deb http://package.perforce.com/apt/ubuntu focal release" > /etc/apt/s
 RUN apt-get update 
 RUN apt-get install -yq systemd
 RUN apt-get install -y helix-p4d=2024.2-2675662~focal
-RUN apt-get install -y helix-swarm-triggers=2024.5-2666202~focal
+RUN apt-get install -y helix-swarm-triggers=2025.1-2768110~focal
 RUN apt-get install -y tmux
 RUN apt-get install -y htop
 
